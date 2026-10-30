@@ -204,6 +204,7 @@ body.mode-start main{padding:0;max-width:none}
 .hero-band .hb-sub{font-size:14.5px;color:var(--muted);margin-top:4px;line-height:1.5}
 body:not(.mode-start)::before{content:"";position:fixed;inset:12px;pointer-events:none;z-index:60;border:1px solid rgba(255,255,255,.16);border-radius:3px}
 /* ==== 사용자 스타일 시작 ==== */
+
 </style>
 </head>
 <body>
@@ -224,7 +225,7 @@ body:not(.mode-start)::before{content:"";position:fixed;inset:12px;pointer-event
       <div class="hero-rule" aria-hidden="true"></div>
       <div class="eyebrow">문제풀이로 쉽게 이해하는</div>
       <h1>영업비밀<br>톺아보기</h1>
-      <div class="hero-meta"><b>총 10문항</b> · 소요 약 5분 · 매번 새로운 문제</div>
+      <div class="hero-meta"><b>총 10문항</b> · 약 5분 소요</div>
       <button class="btn-hero" id="btn-start">문제풀이 시작하기</button>
     </div>
     <div class="hero-band">
@@ -421,13 +422,7 @@ $("btn-next").addEventListener("click", () => {
 
 /* ══════════ 결과 ══════════ */
 /* ==== 점수 구간 시작 ==== */
-const GRADE_TIERS = [
-  {min:10, t:"완벽해요", low:false, m:"만점입니다. 이대로 쭉!"},
-  {min:8, t:"참 잘했어요", low:false, m:"거의 다 왔어요! 틀린 부분의 개념만 살짝 다시 보면 정말 완벽해요."},
-  {min:5, t:"조금 더 힘내볼까요?", low:false, m:"절반을 넘겼으니, 문제풀이를 한 번 더 차분히 반복하며 약점을 튼튼히 다져요."},
-  {min:1, t:"기초부터 차근차근!", low:true, m:"문제풀이 과정을 천천히 복습하며 하나씩 확실하게 익혀가요."},
-  {min:0, t:"새로운 시작 함께해요!", low:true, m:"기본부터 다시 해봐요."}
-];
+const GRADE_TIERS = [{"min":10,"t":"완벽해요","low":false,"m":"만점입니다. 이대로 쭉!"},{"min":8,"t":"참 잘했어요","low":false,"m":"거의 다 왔어요! 틀린 부분의 개념만 살짝 다시 보면 정말 완벽해요."},{"min":5,"t":"조금 더 힘내볼까요?","low":false,"m":"절반을 넘겼으니, 문제풀이를 한 번 더 차분히 반복하며 약점을 튼튼히 다져요."},{"min":1,"t":"기초부터 차근차근!","low":true,"m":"문제풀이 과정을 천천히 복습하며 하나씩 확실하게 익혀가요."},{"min":0,"t":"새로운 시작 함께해요!","low":true,"m":"기본부터 다시 해봐요."}];
 /* ==== 점수 구간 끝 ==== */
 function gradeOf(score, total){
   const g = GRADE_TIERS.find(x => score >= x.min) || GRADE_TIERS[GRADE_TIERS.length - 1];
@@ -481,6 +476,5 @@ if(__p === "result"){
   showResult();
 }
 </script>
-<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"4edd5f8ec12a48cfa682ab8261b80a79","spa":2}' crossorigin="anonymous"></script>
 </body>
 </html>
