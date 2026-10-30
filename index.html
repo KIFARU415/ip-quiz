@@ -45,13 +45,13 @@ body{
 main{flex:1;width:100%;max-width:560px;margin:0 auto;padding:20px 16px 32px}
 [hidden]{display:none!important}
 .chip{
-  display:inline-block;font-size:12px;font-weight:700;color:var(--navy-2);
+  display:inline-block;font-size:13.5px;font-weight:700;color:var(--navy-2);
   border:1px solid var(--navy-2);border-radius:999px;padding:3px 12px;letter-spacing:.06em;
 }
 button{font:inherit;cursor:pointer}
 .btn{
-  display:block;width:100%;min-height:54px;border:none;border-radius:12px;
-  font-size:17px;font-weight:800;letter-spacing:.02em;transition:transform .08s ease, box-shadow .15s ease;
+  display:block;width:100%;min-height:62px;border:none;border-radius:12px;
+  font-size:20.5px;font-weight:800;letter-spacing:.02em;
 }
 .btn:active{transform:translateY(1px)}
 .btn-gold{background:linear-gradient(180deg,var(--gold-2),var(--gold));color:#231a02;box-shadow:0 2px 0 rgba(0,0,0,.18)}
@@ -61,34 +61,38 @@ button:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 /* ── 시작 화면 ───────────────────────── */
 .eyebrow{font-size:12px;font-weight:800;color:var(--gold);letter-spacing:.22em;margin-bottom:10px}
-h1{font-size:27px;line-height:1.34;font-weight:900;letter-spacing:-.01em}
-.lede{margin-top:12px;color:var(--muted);font-size:15px}
-.four{
-  margin:20px 0;display:grid;grid-template-columns:1fr 1fr;gap:10px;
+h1{font-size:34px;line-height:1.34;font-weight:900;letter-spacing:-.01em}
+.lede{margin-top:14px;color:var(--muted);font-size:17.5px}
+.impact{
+  margin:20px 0;display:flex;gap:14px;align-items:stretch;
+  background:linear-gradient(135deg,var(--navy),var(--navy-2));
+  border-radius:var(--radius);padding:18px 16px;color:#fff;
+  border:1px solid var(--navy-3);box-shadow:0 2px 6px rgba(12,34,56,.18);
 }
-.four .cell{
-  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
-  padding:14px 12px;text-align:left;box-shadow:0 1px 2px rgba(12,34,56,.05);
-}
-.four .cell svg{width:22px;height:22px;color:var(--navy-2);margin-bottom:6px}
-.four .cell b{display:block;font-size:14.5px}
-.four .cell span{font-size:12px;color:var(--muted);line-height:1.45;display:block;margin-top:2px}
+.impact .im-art{flex:none;width:86px;display:flex;align-items:center;justify-content:center;color:var(--gold-2)}
+.impact .im-art svg{width:84px;height:84px}
+.impact .im-body{flex:1;min-width:0}
+.impact .im-label{font-size:12px;font-weight:800;color:var(--gold-2);letter-spacing:.08em;margin-bottom:4px}
+.impact .im-stat{font-size:16.5px;font-weight:800;line-height:1.55}
+.impact .im-stat b{color:var(--gold-2);font-size:20px}
+.impact .im-note{font-size:12.5px;color:#c9d4e2;margin-top:6px;line-height:1.5}
+@media (max-width:430px){.impact{flex-direction:column;align-items:center;text-align:center}}
 .howto{
   background:var(--card);border:1px dashed var(--line);border-radius:var(--radius);
-  padding:12px 14px;font-size:13px;color:var(--muted);margin-bottom:20px;
+  padding:14px 16px;font-size:15px;color:var(--muted);margin-bottom:20px;
 }
 .howto b{color:var(--navy-2)}
 /* ── 퀴즈 화면 ───────────────────────── */
 .q-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
-.q-count{font-size:13px;font-weight:700;color:var(--muted);font-variant-numeric:tabular-nums}
+.q-count{font-size:15px;font-weight:700;color:var(--muted);font-variant-numeric:tabular-nums}
 .progress{height:6px;background:#e8e2d2;border-radius:999px;overflow:hidden;margin-bottom:18px}
-#progress-fill{height:100%;width:0;background:linear-gradient(90deg,var(--gold),var(--gold-2));border-radius:999px;transition:width .3s ease}
-#q-text{font-size:19px;font-weight:800;line-height:1.5;letter-spacing:-.01em;margin-bottom:16px}
+#progress-fill{height:100%;width:0;background:linear-gradient(90deg,var(--gold),var(--gold-2));border-radius:999px}
+#q-text{font-size:26px;font-weight:800;line-height:1.5;letter-spacing:-.01em;margin-bottom:16px}
 #q-options{display:flex;flex-direction:column;gap:10px}
 .opt{
   display:flex;align-items:flex-start;gap:10px;text-align:left;width:100%;
   background:var(--card);border:1.5px solid var(--line);border-radius:12px;
-  padding:14px 14px;font-size:15px;line-height:1.5;color:var(--ink);min-height:52px;
+  padding:16px 16px;font-size:19.5px;line-height:1.55;color:var(--ink);min-height:62px;
 }
 .opt .opt-no{font-weight:800;color:var(--navy-2);flex:none;line-height:1.5}
 .opt.is-correct{background:var(--ok-bg);border-color:var(--ok)}
@@ -100,42 +104,42 @@ h1{font-size:27px;line-height:1.34;font-weight:900;letter-spacing:-.01em}
   margin-top:16px;background:#fbf8ef;border-left:4px solid var(--gold);
   border-radius:0 12px 12px 0;padding:14px 16px;
 }
-#explain-tag{font-weight:800;font-size:14px;margin-bottom:4px}
+#explain-tag{font-weight:800;font-size:16px;margin-bottom:6px}
 #explain-tag.ok{color:var(--ok)} #explain-tag.bad{color:var(--bad)}
-#explain-text{font-size:14px;color:#4a4436;line-height:1.65}
+#explain-text{font-size:18px;color:#4a4436;line-height:1.7}
 #btn-next{margin-top:18px}
 /* ── 결과 화면 ───────────────────────── */
 .score-wrap{position:relative;width:150px;margin:6px auto 4px}
 .ring{width:150px;height:150px;transform:rotate(-90deg)}
 .ring circle{fill:none;stroke-width:9;stroke-linecap:round}
 .ring-bg{stroke:#e8e2d2}
-#ring-fg{stroke:url(#goldGrad);stroke-dasharray:326.7;stroke-dashoffset:326.7;transition:stroke-dashoffset 1s ease}
+#ring-fg{stroke:url(#goldGrad);stroke-dasharray:326.7;stroke-dashoffset:326.7}
 .score-num{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
-.score-num b{font-size:40px;font-weight:900;color:var(--navy);line-height:1;font-variant-numeric:tabular-nums}
-.score-num span{font-size:11px;color:var(--muted);letter-spacing:.2em;margin-top:4px}
+.score-num b{font-size:50px;font-weight:900;color:var(--navy);line-height:1;font-variant-numeric:tabular-nums}
+.score-num span{font-size:12.5px;color:var(--muted);letter-spacing:.2em;margin-top:4px}
 #grade-stamp{
   width:130px;margin:14px auto 4px;padding:8px 6px;text-align:center;
   border:3px double var(--gold);border-radius:10px;color:var(--gold);
-  font-size:19px;font-weight:900;letter-spacing:.1em;transform:rotate(-4deg);
+  font-size:23px;font-weight:900;letter-spacing:.1em;transform:rotate(-4deg);
   background:rgba(255,255,255,.6);
 }
 #grade-stamp.low{border-color:var(--bad);color:var(--bad)}
-#grade-msg{text-align:center;color:var(--muted);font-size:14px;max-width:400px;margin:10px auto 0}
+#grade-msg{text-align:center;color:var(--muted);font-size:16.5px;max-width:400px;margin:10px auto 0}
 #cat-stats{margin:24px 0 8px}
-#cat-stats h3,.rv-head{font-size:14px;font-weight:800;color:var(--navy-2);letter-spacing:.05em;margin-bottom:10px}
+#cat-stats h3,.rv-head{font-size:16.5px;font-weight:800;color:var(--navy-2);letter-spacing:.05em;margin-bottom:10px}
 .stat{margin-bottom:10px}
-.stat .row{display:flex;justify-content:space-between;font-size:13px;font-weight:600;margin-bottom:4px}
+.stat .row{display:flex;justify-content:space-between;font-size:15.5px;font-weight:600;margin-bottom:4px}
 .stat .row span:last-child{font-variant-numeric:tabular-nums;color:var(--muted)}
 .bar{height:8px;background:#e8e2d2;border-radius:999px;overflow:hidden}
 .bar i{display:block;height:100%;background:var(--navy-3);border-radius:999px}
 #review{margin-top:22px}
 .rv{background:var(--card);border:1px solid var(--line);border-radius:12px;margin-bottom:10px;overflow:hidden}
-.rv summary{list-style:none;display:flex;gap:8px;align-items:flex-start;padding:12px 14px;cursor:pointer;font-size:14px;font-weight:600;line-height:1.5}
+.rv summary{list-style:none;display:flex;gap:8px;align-items:flex-start;padding:14px 14px;cursor:pointer;font-size:16px;font-weight:600;line-height:1.5}
 .rv summary::-webkit-details-marker{display:none}
 .rv .tag{flex:none;font-size:11px;font-weight:800;border-radius:6px;padding:2px 8px;margin-top:2px}
 .rv.ok .tag{background:var(--ok-bg);color:var(--ok)}
 .rv.bad .tag{background:var(--bad-bg);color:var(--bad)}
-.rv-body{padding:0 14px 14px;font-size:13.5px}
+.rv-body{padding:0 14px 16px;font-size:15.5px}
 .rv-body .ans{margin-bottom:8px}
 .rv-body .ans b{font-weight:700}
 .rv-body .ans.mine-wrong b{color:var(--bad)} .rv-body .ans.correct b{color:var(--ok)}
@@ -143,21 +147,92 @@ h1{font-size:27px;line-height:1.34;font-weight:900;letter-spacing:-.01em}
 .btns{margin-top:22px}
 /* ── 하단 ───────────────────────── */
 footer{
-  background:var(--navy);color:#9fb0c3;font-size:11.5px;line-height:1.7;
+  background:var(--navy);color:#a9b8ca;font-size:13px;line-height:1.7;
   padding:16px 20px 26px;text-align:center;
 }
 footer b{color:#d8e0ea;font-weight:700}
 footer .gold{color:var(--gold-2)}
+/* ── 시작 화면: 인크 편집 디자인 (모션 없음) ───────── */
+body.mode-start .topbar{display:none}
+body.mode-start footer{display:none}
+body.mode-start main{padding:0;max-width:none}
+#screen-start{
+  min-height:100dvh;display:flex;flex-direction:column;
+  background:linear-gradient(180deg,#0d2547 0%,#0a1e3a 55%,#081831 100%);
+  color:#eef3f9;
+}
+.hero-top{display:none}
+#screen-start::before{
+  content:"";position:absolute;inset:12px;pointer-events:none;
+  border:1px solid rgba(255,255,255,.16);border-radius:3px;
+}
+#screen-start::after{
+  content:"";position:absolute;inset:12px;pointer-events:none;
+  background:
+    linear-gradient(rgba(255,255,255,.5),rgba(255,255,255,.5)) left top,
+    linear-gradient(rgba(255,255,255,.5),rgba(255,255,255,.5)) left top,
+    linear-gradient(rgba(255,255,255,.5),rgba(255,255,255,.5)) right top,
+    linear-gradient(rgba(255,255,255,.5),rgba(255,255,255,.5)) right top,
+    linear-gradient(rgba(255,255,255,.5),rgba(255,255,255,.5)) left bottom,
+    linear-gradient(rgba(255,255,255,.5),rgba(255,255,255,.5)) left bottom,
+    linear-gradient(rgba(255,255,255,.5),rgba(255,255,255,.5)) right bottom,
+    linear-gradient(rgba(255,255,255,.5),rgba(255,255,255,.5)) right bottom;
+  background-size:20px 2px,2px 20px,20px 2px,2px 20px,20px 2px,2px 20px,20px 2px,2px 20px;
+  background-repeat:no-repeat;
+}
+.hero-inner{
+  flex:1;width:100%;max-width:640px;margin:0 auto;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:48px 26px 44px;
+}
+.hero-rule{width:44px;border-top:1px solid rgba(255,255,255,.4);margin-bottom:30px;position:relative}
+.hero-rule::after{
+  content:"";position:absolute;left:50%;top:-3.5px;width:6px;height:6px;
+  transform:translateX(-50%) rotate(45deg);background:#0d2547;
+  box-shadow:0 0 0 1px rgba(255,255,255,.45);
+}
+.hero-inner .eyebrow{
+  color:#9db6d6;font-size:18px;font-weight:700;letter-spacing:.34em;text-indent:.34em;
+  margin:0 0 20px;
+}
+.hero-inner h1{
+  font-family:"Noto Serif KR","Nanum Myeongjo","Batang","BatangChe",serif;
+  color:#ffffff;font-size:clamp(54px,15vw,72px);font-weight:900;
+  line-height:1.18;letter-spacing:.005em;margin:0;
+}
+.hero-meta{
+  margin-top:24px;font-size:19px;color:#93aac9;font-weight:600;letter-spacing:.04em;
+}
+.hero-meta b{color:#e8f0fa;font-weight:800}
+.btn-hero{
+  display:block;width:min(340px,88%);min-height:78px;border:none;border-radius:6px;
+  background:#ffffff;color:#0d2242;font-size:21px;font-weight:800;letter-spacing:.08em;
+  margin:46px auto 0;cursor:pointer;border-radius:3px;box-shadow:0 2px 0 rgba(4,12,26,.5), inset 0 0 0 1px rgba(13,34,66,.14);
+}
+.btn-hero:active{background:#e8eef6}
+.btn-hero:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.hero-band{
+  flex:none;background:#ffffff;border-top:1px solid rgba(255,255,255,.2);
+  display:flex;align-items:center;gap:14px;text-align:left;
+  padding:16px 20px calc(16px + env(safe-area-inset-bottom));
+}
+.hero-band img{width:54px;height:54px;flex:none;object-fit:contain}
+.hero-band .hb-name{font-size:17.5px;font-weight:800;color:var(--navy);line-height:1.3;letter-spacing:.01em}
+.hero-band .hb-sub{font-size:14.5px;color:var(--muted);margin-top:4px;line-height:1.5}
+/* ==== 사용자 스타일 시작 ==== */
+
 </style>
 </head>
 <body>
 
 <header class="topbar">
   <div class="org">
+    <!-- mark-start -->
     <svg viewBox="0 0 24 24" fill="none" stroke="#e3bf52" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true">
       <path d="M12 2.5l7.5 2.8v5.6c0 4.8-3.2 8.9-7.5 10.4-4.3-1.5-7.5-5.6-7.5-10.4V5.3L12 2.5z"/>
       <path d="M8.6 11.8l2.4 2.4 4.4-4.6" stroke-linecap="round"/>
     </svg>
+    <!-- mark-end -->
     <span>서울경찰청 산업기술안보수사대</span>
   </div>
   <div class="org-en">TRADE SECRET PROTECTION</div>
@@ -167,36 +242,24 @@ footer .gold{color:var(--gold-2)}
 
   <!-- 시작 화면 -->
   <section id="screen-start">
-    <div class="eyebrow">중소기업 영업비밀 보호 자가진단</div>
-    <h1>영업비밀 톺아보기</h1>
-    <p class="lede">영업비밀로 법적 보호를 받기 위해 갖추어야 할 4가지 관건에 대해 알아보는 자가진단 테스트입니다. 문항은 매번 무작위로 출제됩니다.</p>
-
-    <div class="four">
-      <div class="cell">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 3l18 18"/><path d="M10.6 5.1A9.8 9.8 0 0 1 12 5c5 0 9 4.5 10 7-.3.8-1 1.9-2.1 3"/><path d="M6.1 6.7C4.1 8.2 2.6 10.2 2 12c1 2.5 5 7 10 7 1.8 0 3.4-.6 4.8-1.4"/><path d="M9.9 9.9a3 3 0 0 0 4.2 4.2"/></svg>
-        <b>비공지성</b><span>공개되어 있지 않은 정보인가</span>
-      </div>
-      <div class="cell">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 20V10"/><path d="M10 20V4"/><path d="M16 20v-7"/><path d="M22 20H2"/></svg>
-        <b>경제적 유용성</b><span>영업활동에 유용한 정보인가</span>
-      </div>
-      <div class="cell">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="4" y="10.5" width="16" height="10" rx="2"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/><circle cx="12" cy="15.5" r="1.6"/></svg>
-        <b>비밀관리성</b><span>비밀로 관리되고 있는가</span>
-      </div>
-      <div class="cell">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 3a6.5 6.5 0 0 1 6.5 6.5c0 4 1.5 5.5 1.5 5.5H4s1.5-1.5 1.5-5.5A6.5 6.5 0 0 1 12 3z"/><path d="M10 19a2.2 2.2 0 0 0 4 0"/></svg>
-        <b>사후대응</b><span>유출 시 이렇게 대응합니다</span>
+    <div class="hero-top" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <div class="hero-rule" aria-hidden="true"></div>
+      <div class="eyebrow">문제풀이로 쉽게 이해하는</div>
+      <h1>영업비밀<br>톺아보기</h1>
+      <div class="hero-meta"><b>총 10문항</b> · 소요 약 5분 · 매번 새로운 문제</div>
+      <button class="btn-hero" id="btn-start">문제풀이 시작하기</button>
+    </div>
+    <div class="hero-band">
+      <img src="data:image/png;base64,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" alt="경찰 엠블럼">
+      <div>
+        <div class="hb-name" id="band-agency">서울경찰청 산업기술안보수사대</div>
+        <div class="hb-sub" id="band-sub">서울특별시 종로구 율곡로38</div>
       </div>
     </div>
-
-    <div class="howto">&lt;b&gt;총 10문항 · 소요 약 5분 · 문항당 1점, 정답 선택 즉시 해설이 제공됩니다.
-      4개 영역에서 균형 있게 &lt;b&gt;무작위 출제되므로, 다시 풀면 새로운 문제를 만나게 됩니다.</div>
-
-    <button class="btn btn-gold" id="btn-start">자가진단 시작하기</button>
   </section>
 
-  <!-- 퀴즈 화면 -->
+  <!-- 퀴즈 화면 -->  <!-- 퀴즈 화면 -->
   <section id="screen-quiz" hidden>
     <div class="q-head">
       <span class="chip" id="q-cat">영역</span>
@@ -329,7 +392,8 @@ function shuffle(arr){
 }
 function show(id){
   ["screen-start","screen-quiz","screen-result"].forEach(s => $(s).hidden = (s !== id));
-  window.scrollTo(0, 0);
+  document.body.classList.toggle("mode-start", id === "screen-start");
+window.scrollTo(0, 0);
 }
 
 /* ══════════ 출제 : 4개 영역 균형 + 무작위 10문항 ══════════ */
@@ -502,6 +566,8 @@ function showResult(){
 $("btn-start").addEventListener("click", startQuiz);
 $("btn-retry").addEventListener("click", startQuiz);
 $("btn-home").addEventListener("click", () => show("screen-start"));
+
+document.body.classList.add("mode-start");
 
 /* 렌더링 검사용 파라미터 (실사용 시 무시됨) */
 const __p = new URLSearchParams(location.search).get("preview");
